@@ -1,0 +1,6 @@
+secret.env
+db.sqlite3
+.venv
+.idea
+.git
+files.gitignore
