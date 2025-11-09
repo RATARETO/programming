@@ -4,3 +4,4 @@ db.sqlite3
 .idea
 .git
 files.gitignore
+migrations
