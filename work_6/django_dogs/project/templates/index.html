@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Собачьи породы</title>
+</head>
+<body>
+    <h1>Выберите породу собаки</h1>
+
+    <form action="{% url 'target_dog' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="breed" placeholder="Введите породу собаки">
+        <button type="submit">Показать собаку</button>
+    </form>
+
+    <h2>Доступные породы:</h2>
+    <ul>
+        {% for dog in dogs %}
+            <li>{{ dog.breed }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
